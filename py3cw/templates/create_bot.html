@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trading Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Trading Bot</h1>
+
+    <form action="/create_bot" method="POST">
+        <label for="script">Pine Script Code:</label>
+        <textarea id="script" name="script" required></textarea><br><br>
+
+        <label for="currencies">Select Cryptocurrencies:</label>
+        <select id="currencies" name="currencies" multiple required>
+            <option value="BTC">Bitcoin (BTC)</option>
+            <option value="ETH">Ethereum (ETH)</option>
+            <option value="XRP">Ripple (XRP)</option>
+            <option value="LTC">Litecoin (LTC)</option>
+            <!-- Add more cryptocurrency options here -->
+        </select><br><br>
+
+        <input type="submit" value="Create Bot">
+    </form>
+    <a href="/logout">Logout</a>
+
+</body>
+</html>

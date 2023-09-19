@@ -1,6 +1,6 @@
 import pytest
 from .request import Py3CW
-
+from tradingview_ta import TA_Handler, Exchange, Analysis, TradingView, Interval
 
 def test_error_missing_key():
     with pytest.raises(ValueError) as excinfo:

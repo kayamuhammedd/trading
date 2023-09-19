@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+
+    <h2>Active Trades</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Symbol</th>
+                <th>Entry Price</th>
+                <th>Safety Order Count</th>
+                <th>Used Safety Order Count</th>
+                <th>Safety Order Size</th>
+                <th>Active</th>
+                <th>Last Buy Price</th>
+                <th>Average Buy Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for trade in trades %}
+        <tr>
+            {% for key,value in trade.items() %}
+
+                <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>TODO Completed Trades TODO</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Symbol</th>
+                <th>Entry Price</th>
+                <th>Safety Order Count</th>
+                <th>Used Safety Order Count</th>
+                <th>Safety Order Size</th>
+                <th>Active</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for trade in trades %}
+        <tr>
+            {% for key,value in trade.items() %}
+                <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Binance Balance</h2>
+    <p>Available Balance: {{ binance_balance }}</p>
+    <a href="/logout">Logout</a>
+
+</body>
+</html>
