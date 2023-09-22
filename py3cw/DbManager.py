@@ -22,6 +22,7 @@ class DBHelper:
         self.db["Users"].create_index([('Email', pymongo.ASCENDING)], unique=True)
         try:
             self.db["Users"].insert_one(user_dict)
+            return False
         except pymongo.errors.DuplicateKeyError as e:
             print("The user exist")
             print(e)

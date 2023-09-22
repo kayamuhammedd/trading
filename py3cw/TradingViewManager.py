@@ -148,22 +148,20 @@ def create_user():
     username = request.form['username']
     email = request.form['email']
     password = request.form['password']
-    tradingviewApiKey = request.form['tradingviewApiKey']
-    tradingviewApiSecret = request.form['tradingviewApiSecret']
+    #tradingviewApiKey = request.form['tradingviewApiKey']
+    #tradingviewApiSecret = request.form['tradingviewApiSecret']
     binanceApiKey = request.form['binanceApiKey']
     binanceApiSecret = request.form['binanceApiSecret']
 
     user = {
-        'username': username,
-        'email': email,
-        'password': password,
-        'tradingviewApiKey': tradingviewApiKey,
-        'tradingviewApiSecret': tradingviewApiSecret,
-        'binanceApiKey': binanceApiKey,
-        'binanceApiSecret': binanceApiSecret,
+        'Username': username,
+        'Email': email,
+        'Password': password,
+        'BinanceApiKey': binanceApiKey,
+        'BinanceApiSecret': binanceApiSecret,
     }
     result = _db.insert_user(user)
-    if (str(result) == "None"):
+    if result == False:
         return redirect('/dashboard')
 
     return "Failed creating user"
