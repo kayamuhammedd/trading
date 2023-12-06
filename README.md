@@ -1,109 +1,79 @@
-# py3cw
+PyCharm Kurulumu:
+PyCharm'u İndirin:
 
-![Upload Python Package](https://github.com/bogdanteodoru/py3cw/workflows/Upload%20Python%20Package/badge.svg?branch=master)
+JetBrains web sitesini ziyaret edin: PyCharm İndirme Sayfası.
+İhtiyacınıza göre sürümü (Community veya Professional) seçin.
+İşletim sisteminizi (Windows/Mac/Linux) seçin ve indirme bağlantısına tıklayın.
+Kurulum:
 
-Unofficial wrapper for the [3Commas API](https://github.com/3commas-io/3commas-official-api-docs) written in Python.
-***
+İndirilen dosyayı çift tıklayarak çalıştırın.
+İzin istenirse, yönetici olarak çalıştırın.
+Kurulum sihirbazı başlayacaktır. İleri butonuna tıklayın.
+Lisans sözleşmesini kabul edin ve "Next" (İleri) butonuna tıklayın.
+Kurulum türünü seçin (Tüm kullanıcılar için veya yalnızca sizin için) ve devam edin.
+İleri butonuna tıklayarak kurulumu başlatın.
+Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayarak PyCharm'ı başlatın.
+Anaconda Kurulumu:
+Anaconda'yı İndirin:
 
-How to install 
+Anaconda web sitesini ziyaret edin: Anaconda İndirme Sayfası.
+İşletim sisteminize uygun olan Python 3.x sürümündeki kurulum dosyasını indirin.
+Kurulum:
 
-```bash
-pip install py3cw
-```
+İndirilen dosyayı çift tıklayarak çalıştırın.
+İzin istenirse, yönetici olarak çalıştırın.
+Kurulum sihirbazı başlayacaktır. İleri butonuna tıklayın.
+Lisans sözleşmesini kabul edin ve "Next" (İleri) butonuna tıklayın.
+Kurulum dizinini seçin veya varsayılanı kullanın ve devam edin.
+Kurulum seçeneklerini seçin (PATH'e eklemek gibi) ve devam edin.
+İleri butonuna tıklayarak kurulumu başlatın.
+Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayın.
+MongoDB Sunucusu Kurulumu:
+MongoDB'yi İndirin:
 
-How to use
+MongoDB indirme merkezini ziyaret edin: MongoDB İndirme Sayfası.
+İşletim sisteminize uygun sürümü seçin ve indirin.
+Kurulum:
 
-```python
-from py3cw.request import Py3CW
+İndirilen dosyayı çift tıklayarak çalıştırın.
+İzin istenirse, yönetici olarak çalıştırın.
+Kurulum sihirbazı başlayacaktır. İleri butonuna tıklayın.
+Lisans sözleşmesini kabul edin ve "Next" (İleri) butonuna tıklayın.
+Kurulum dizinini seçin veya varsayılanı kullanın ve devam edin.
+Kurulum seçeneklerini seçin (Servisi başlatma gibi) ve devam edin.
+İleri butonuna tıklayarak kurulumu başlatın.
+Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayın.
+MongoDB İstemcisi Kurulumu:
+MongoDB Compass'ı İndirin:
 
-# request_options is optional, as all the keys from the dict
-# so you can only change what you want.
-#
-# default options for request_options are:
-# request_timeout: 30s (30 for connect, 30 for read)
-# nr_of_retries: 5
-# retry_status_codes: [500, 502, 503, 504]
-# retry_backoff_factor (optional): It allows you to change how long the processes will sleep between failed requests.
-# For example, if the backoff factor is set to:
-# 1 second the successive sleeps will be 0.5, 1, 2, 4, 8, 16, 32, 64, 128, 256.
-# 2 seconds - 1, 2, 4, 8, 16, 32, 64, 128, 256, 512
-# 10 seconds - 5, 10, 20, 40, 80, 160, 320, 640, 1280, 2560
-# 
-# NOTE: Nr of retries and retry_status_codes will also be used if we get 
-# an falsy success from 3 commas (eg: { "error": { "status_code": 502 }})
-p3cw = Py3CW(
-    key='', 
-    secret='',
-    request_options={
-        'request_timeout': 10,
-        'nr_of_retries': 1,
-        'retry_status_codes': [502],
-        'retry_backoff_factor': 0.1
-    }
-)
+MongoDB indirme merkezini ziyaret edin: MongoDB Compass İndirme Sayfası.
+İşletim sisteminize uygun MongoDB Compass uygulamasını indirin.
+Kurulum:
 
-# With no action
-# Destruct response to error and data
-# and check first if we have an error, otherwise check the data
-error, data = p3cw.request(
-    entity='smart_trades_v2',
-    action=''
-)
+İndirilen dosyayı çift tıklayarak çalıştırın.
+İzin istenirse, yönetici olarak çalıştırın.
+Kurulum sihirbazı başlayacaktır. İleri butonuna tıklayın.
+Lisans sözleşmesini kabul edin ve "Next" (İleri) butonuna tıklayın.
+Kurulum dizinini seçin veya varsayılanı kullanın ve devam edin.
+İleri butonuna tıklayarak kurulumu başlatın.
+Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayın.
+pip install -r requirements.txt ile Python Paketlerinin Kurulumu:
+Gereksinimler Dosyası Oluşturma:
 
-# With payload data
-# Destruct response to error and data
-# and check first if we have an error, otherwise check the data
-error, data  = p3cw.request(
-    entity='smart_trades_v2', 
-    action='new', 
-    payload={
-        "account_id": 123456,
-        ......
-    }
-)
+Bir metin düzenleyici açın ve requirements.txt adında bir dosya oluşturun.
+Python paketlerini ve sürümlerini belirtin veya en son sürüm için paket_adı kullanın. Örnek:
+makefile
+numpy==1.21.3
+pandas==1.3.4
+requests
+Paketleri Kurma:
 
-# With action_id replaced in URL
-# Destruct response to error and data
-# and check first if we have an error, otherwise check the data
-error, data = p3cw.request(
-    entity='smart_trades_v2', 
-    action='get_by_id',
-    action_id='123456'
-)
-```
+Bir terminal veya komut istemcisini açın.(Command Prompt)
+requirements.txt dosyasının bulunduğu dizine gidin.
+Aşağıdaki komutu çalıştırın:
+pip install -r requirements.txt
+Bu komut, belirtilen paketleri ve (varsa) belirtilen sürümlerini Python ortamınıza kuracaktır.
 
-An `entity` represents main categories. Meaning, you have `accounts`, `bots`, `marketplace`, `deals` or `smart_trades`
-
-An `action` is represented by a ... well, an action of a specific category. There are multiple actions you can use (check 3commas API)
-
-`action_id` is used to replace the necessary account_id or bot_id or deal_id (you get the picture) needed on some actions. For example the `action` `sell_all_to_btc` requires the `account_id` (`POST /ver1/accounts/{account_id}/load_balances`)
-
-`payload` is the data you send.
-
-[Forced mode header](https://github.com/3commas-io/3commas-official-api-docs#api-modesreal-or-paper) could be added with the parameter `additional_headers`. Allowed values are 'real' or 'paper'. E.g. 
-`... additional_headers={'Forced-Mode': 'paper'} ...`
-
-***
-
-3Commas API helpers.
-
-3Commas Docs: https://github.com/3commas-io/3commas-official-api-docs
-
-Accounts: https://github.com/3commas-io/3commas-official-api-docs/blob/master/accounts_api.md
-
-Bots: https://github.com/3commas-io/3commas-official-api-docs/blob/master/bots_api.md
-
-Deals: https://github.com/3commas-io/3commas-official-api-docs/blob/master/deals_api.md
-
-Marketplace: https://github.com/3commas-io/3commas-official-api-docs/blob/master/marketplace_api.md
-
-Grid Bots: https://github.com/3commas-io/3commas-official-api-docs/blob/master/grid_bots_api.md
-
-Smart Trades: https://github.com/3commas-io/3commas-official-api-docs/blob/master/smart_trades_v2_api.md
-***
-
-Best used with [Binance](https://www.binance.com/en/register?ref=XEK765NE).
-
-buy me a beer 🍺
-
-ETH: 0x0c2EA600d8bECE889F998D6a22332298E879940b
+EKSİKLER:
+1- Binance API isteği
+2- Pine scriptin bot tarafından otomatik TradingView'a yollanması

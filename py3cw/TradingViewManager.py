@@ -1,9 +1,11 @@
 
 import json
+
+import requests
 from flask import Flask, request, render_template, session, redirect
 
-from py3cw.DbManager import DBHelper
-from py3cw.BinanceManager import BinanceManager
+from DbManager import DBHelper
+from BinanceManager import BinanceManager
 _db = DBHelper()
 _tables = _db.instance()
 _users = _tables["Users"]

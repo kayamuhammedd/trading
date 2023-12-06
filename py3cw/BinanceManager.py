@@ -3,7 +3,7 @@ import pandas as pd
 from binance.client import Client as binanceClient
 from config import config
 
-from py3cw.DbManager import DBHelper
+from DbManager import DBHelper
 
 class BinanceManager:
     def __init__(self):
