@@ -7,8 +7,8 @@ from DbManager import DBHelper
 
 class BinanceManager:
     def __init__(self):
-        self.api_key = "w9aYHSBTXnclcy3c4YatGmzthBbGT4u9DdQUgeBPhr1MwmCiCsqVcIm60Ga5cyhP"
-        self.api_secret = "teDT2AAk8hcWByaLt6aHX0wEWUthoL9VvDMmQXaqjKLXLUaI5w8S1VlfOaVM1PEU"
+        self.api_key = ""
+        self.api_secret = ""
         self.client = binanceClient(self.api_key, self.api_secret)
         #self.bsm = BinanceSocketManager(self.client)
         #self.conn = self.bsm.start_symbol_ticker_futures_socket('XLMUSDT', self.trade_history)

@@ -122,13 +122,13 @@ API_METHODS = {
     }
 }
 config = {
-    "bot_token": "5790282708:AAEgkOXPql_woVStztRK6Oj7CAprbzrxBME",
-    "three_commas_api_key": "9ad729005daf4adbb02d624df3b509209e13850105d9446791fe69af81eea38d",
-    "three_commas_secret_key": "f67fc4da5cddb8b878fe2e3b81a669f6cee0245555ae4a34f23ab22f80ffeb2fec78156d8ee85af207bb7c449d6158b1a7059dbb1b854ab03618a356b29b0133de1916f516422bbf9556f05a0ee9437299557ccb999029d89fdbefa82b12f728b43cc149",
-    "binance_api_key": "w9aYHSBTXnclcy3c4YatGmzthBbGT4u9DdQUgeBPhr1MwmCiCsqVcIm60Ga5cyhP",
-    "binance_secret_key": "teDT2AAk8hcWByaLt6aHX0wEWUthoL9VvDMmQXaqjKLXLUaI5w8S1VlfOaVM1PEU",
-    "binance_test_api_key": "gbefSF4HBzIZazw65MiiLhIcTIUD6mZBI8vXe0pqo2fKcuzZhZsLER1AyzZ26qPT",
-    "binance_test_secret_key": "VMDNSkTjAaI5WKhpnSlmT77uphbMHzuAM6aCaL6cfbWsVQBP2VKdMyZQNodjrM1M",
+    "bot_token": "",
+    "three_commas_api_key": "",
+    "three_commas_secret_key": "",
+    "binance_api_key": "",
+    "binance_secret_key": "",
+    "binance_test_api_key": "",
+    "binance_test_secret_key": "",
     'coin_list': ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'CHZUSDT', 'ENJUSDT', 'LTCUSDT', 'ADAUSDT', 'DOTUSDT',
                   'REEFUSDT', 'LINKUSDT', 'XRPUSDT', 'BCHUSDT', 'SUSHIUSDT', 'SFPUSDT', 'ALGOUSDT', 'EOSUSDT',
                   'UNIUSDT', 'SXPUSDT', 'FILUSDT', 'VETUSDT', 'AVAXUSDT', 'LUNAUSDT', 'MATICUSDT', 'XEMUSDT',
