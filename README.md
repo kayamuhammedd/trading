@@ -2,8 +2,8 @@ PyCharm Kurulumu:
 PyCharm'u İndirin:
 
 JetBrains web sitesini ziyaret edin: PyCharm İndirme Sayfası.
-İhtiyacınıza göre sürümü (Community veya Professional) seçin.
-İşletim sisteminizi (Windows/Mac/Linux) seçin ve indirme bağlantısına tıklayın.
+İhtiyacınıza göre sürümü (Community) seçin.
+İşletim sisteminizi (Windows) seçin ve indirme bağlantısına tıklayın.
 Kurulum:
 
 İndirilen dosyayı çift tıklayarak çalıştırın.
@@ -13,6 +13,7 @@ Lisans sözleşmesini kabul edin ve "Next" (İleri) butonuna tıklayın.
 Kurulum türünü seçin (Tüm kullanıcılar için veya yalnızca sizin için) ve devam edin.
 İleri butonuna tıklayarak kurulumu başlatın.
 Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayarak PyCharm'ı başlatın.
+
 Anaconda Kurulumu:
 Anaconda'yı İndirin:
 
@@ -28,6 +29,7 @@ Kurulum dizinini seçin veya varsayılanı kullanın ve devam edin.
 Kurulum seçeneklerini seçin (PATH'e eklemek gibi) ve devam edin.
 İleri butonuna tıklayarak kurulumu başlatın.
 Kurulum tamamlandıktan sonra "Finish" (Bitir) butonuna tıklayın.
+
 MongoDB Sunucusu Kurulumu:
 MongoDB'yi İndirin:
 
